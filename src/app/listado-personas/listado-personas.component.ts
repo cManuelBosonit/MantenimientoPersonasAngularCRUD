@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Persona } from '../interfaces/persona.interface';
+import { PersonasService } from '../personas.service';
 
 const personasMock: Persona[] = [
   {idPersona:'1', user: 'Man', password:'seguro', name:'Manuel', surname: 'Hernández',companyEmail:'mh@company.com', personalEmail: 'mh@personal.com',
@@ -24,11 +25,17 @@ export class ListadoPersonasComponent implements OnInit {
   displayedColumns: string[] = ['idPersona', 'user', 'password', 'name', 'surname', 'companyEmail', 'personalEmail',
   'city', 'activate', 'createdDate', 'imagenUrl','terminationDate']
   dataSource = personasMock;
+  personas: Persona[] = [];
   
 
-  constructor() { }
+  constructor( private personaSerice:PersonasService) { }
 
   ngOnInit(): void {
+    this.personaSerice.getAllPersonas()
+      .subscribe(data => {
+        console.log('Datos de Api');
+        console.log(data);
+      })
   }
 
 }
