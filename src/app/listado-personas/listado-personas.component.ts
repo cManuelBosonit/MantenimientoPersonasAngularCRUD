@@ -33,8 +33,7 @@ export class ListadoPersonasComponent implements OnInit {
   ngOnInit(): void {
     this.personaSerice.getAllPersonas()
       .subscribe(data => {
-        console.log('Datos de Api');
-        console.log(data);
+        this.personas = data;
       })
   }
 
