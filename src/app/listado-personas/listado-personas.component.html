@@ -1,4 +1,18 @@
 
+<mat-form-field class="example-form-field" appearance="fill">
+  <mat-label>Filtros</mat-label>
+  <input matInput
+        type="text"
+        [(ngModel)]="value">
+        <button matSuffix mat-icon-button aria-label="Clear" (click)="filterByName(value)">
+          <mat-icon>filter_list</mat-icon>
+        </button>
+        <button matSuffix mat-icon-button aria-label="Clear" (click)="value=''; ngOnInit()">
+          <mat-icon>delete</mat-icon>
+        </button>
+      
+</mat-form-field> 
+  
   <table mat-table [dataSource]="personas" class="mat-elevation-z8">
 
     <ng-container *ngFor="let column of displayedColumns"

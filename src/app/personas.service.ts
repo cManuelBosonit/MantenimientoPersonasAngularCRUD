@@ -17,4 +17,10 @@ export class PersonasService {
     return this.http.get<Persona[]>(completeUrl); 
   }
 
+  getPersonaByName(name: string):Observable<Persona[]>{
+    let completeUrl = `${this.url}/personas/?name=${name}`;
+    console.log(completeUrl);
+    return this.http.get<Persona[]>(completeUrl); 
+  }
+
 }
