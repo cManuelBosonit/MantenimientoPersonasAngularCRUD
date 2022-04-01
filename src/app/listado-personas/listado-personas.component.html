@@ -1,80 +1,13 @@
-<table mat-table [dataSource]="personas" class="mat-elevation-z8">
-
-    <ng-container matColumnDef="idPersona">
-      <th mat-header-cell *matHeaderCellDef> ID </th>
-      <td mat-cell *matCellDef="let element"> {{element.idPersona}} </td>
-    </ng-container>
-  
-    <ng-container matColumnDef="user">
-      <th mat-header-cell *matHeaderCellDef> Usuario </th>
-      <td mat-cell *matCellDef="let element"> {{element.user}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="password">
-        <th mat-header-cell *matHeaderCellDef> Conteaseña </th>
-        <td mat-cell *matCellDef="let element"> {{element.password}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef> Nombre </th>
-        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-    </ng-container>
-  
-    <ng-container matColumnDef="surname">
-      <th mat-header-cell *matHeaderCellDef> Apellido </th>
-      <td mat-cell *matCellDef="let element"> {{element.surname}} </td>
-    </ng-container>
-  
-    <ng-container matColumnDef="companyEmail">
-      <th mat-header-cell *matHeaderCellDef> Email Compañia </th>
-      <td mat-cell *matCellDef="let element"> {{element.companyEmail}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="personalEmail">
-        <th mat-header-cell *matHeaderCellDef> Email Personal </th>
-        <td mat-cell *matCellDef="let element"> {{element.personalEmail}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="city">
-        <th mat-header-cell *matHeaderCellDef> Ciudad </th>
-        <td mat-cell *matCellDef="let element"> {{element.city}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="activate">
-        <th mat-header-cell *matHeaderCellDef> Activado </th>
-        <td mat-cell *matCellDef="let element"> {{element.activate}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="createdDate">
-        <th mat-header-cell *matHeaderCellDef> Creación </th>
-        <td mat-cell *matCellDef="let element"> {{element.createdDate}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="imagenUrl">
-        <th mat-header-cell *matHeaderCellDef> Imagen </th>
-        <td mat-cell *matCellDef="let element"> {{element.imagenUrl}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="terminationDate">
-        <th mat-header-cell *matHeaderCellDef> Fin </th>
-        <td mat-cell *matCellDef="let element"> {{element.terminationDate}} </td>
-    </ng-container>
-  
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
-  
-<!--   <hr>
 
   <table mat-table [dataSource]="personas" class="mat-elevation-z8">
 
     <ng-container *ngFor="let column of displayedColumns"
                 matColumnDef="{{column}}">
       <th mat-header-cell *matHeaderCellDef> {{column | titlecase}} </th>
-      <td mat-cell *matCellDef="let element; let i = index"> {{element.name}} </td>
+      <td mat-cell *matCellDef="let element; let i = index"> {{element[column]}} </td>
     </ng-container>
 
   
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table> -->
+  </table>
