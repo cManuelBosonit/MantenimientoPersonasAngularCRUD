@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import { ModalDialogComponent } from '../modal-dialog/modal-dialog.component';
-import { Persona } from '../interfaces/persona.interface';
 
 @Component({
   selector: 'app-modal',

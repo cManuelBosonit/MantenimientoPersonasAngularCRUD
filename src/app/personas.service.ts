@@ -27,5 +27,10 @@ export class PersonasService {
     return this.http.get<Persona>(completeUrl); 
   }
 
+  deleteById(id: number):Observable<Persona>{
+    const completeUrl = `${this.url}/personas/${id}`
+    return this.http.delete<Persona>(completeUrl); 
+  }
+
 
 }

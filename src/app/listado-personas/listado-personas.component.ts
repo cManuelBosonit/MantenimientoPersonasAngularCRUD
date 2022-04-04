@@ -33,11 +33,4 @@ export class ListadoPersonasComponent implements OnInit {
       })
   }
 
-  getPersona( id: number ){
-    this.personaService.getPersonaById(id)
-      .subscribe(data => {
-        this.personaDetalle = data;
-      })
-  }
-
 }
