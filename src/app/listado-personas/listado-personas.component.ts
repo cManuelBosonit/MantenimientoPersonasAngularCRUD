@@ -28,7 +28,6 @@ export class ListadoPersonasComponent implements OnInit {
   filterByName( name: string ){
     this.personaSerice.getPersonaByName(name)
       .subscribe(data => {
-        console.log(data);
         this.personas = data;
       })
   }

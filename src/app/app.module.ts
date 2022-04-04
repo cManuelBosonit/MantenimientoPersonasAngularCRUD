@@ -7,6 +7,8 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
+import {MatDialogModule} from '@angular/material/dialog';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -14,9 +16,12 @@ import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
 
 
+
 import { Error404Component } from './error404/error404.component';
 import { HomeComponent } from './home/home.component';
 import { ListadoPersonasComponent } from './listado-personas/listado-personas.component';
+import { ModalComponent } from './modal/modal.component';
+import { ModalDialogComponent } from './modal-dialog/modal-dialog.component';
 
 
 @NgModule({
@@ -24,12 +29,16 @@ import { ListadoPersonasComponent } from './listado-personas/listado-personas.co
     AppComponent,
     Error404Component,
     HomeComponent,
-    ListadoPersonasComponent
+    ListadoPersonasComponent,
+    ModalComponent,
+    ModalDialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatButtonModule,
+    MatDialogModule,
     FormsModule,
     MatInputModule,
     MatFormFieldModule,
