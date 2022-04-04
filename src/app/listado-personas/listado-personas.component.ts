@@ -17,24 +17,24 @@ export class ListadoPersonasComponent implements OnInit {
   personaDetalle : any;
   
 
-  constructor( private personaSerice:PersonasService) { }
+  constructor( private personaService:PersonasService) { }
 
   ngOnInit(): void {
-    this.personaSerice.getAllPersonas()
+    this.personaService.getAllPersonas()
       .subscribe(data => {
         this.personas = data;
       })
   }
 
   filterByName( name: string ){
-    this.personaSerice.getPersonaByName(name)
+    this.personaService.getPersonaByName(name)
       .subscribe(data => {
         this.personas = data;
       })
   }
 
   getPersona( id: number ){
-    this.personaSerice.getPersonaById(id)
+    this.personaService.getPersonaById(id)
       .subscribe(data => {
         this.personaDetalle = data;
       })
