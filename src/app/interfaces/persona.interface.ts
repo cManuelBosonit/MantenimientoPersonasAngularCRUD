@@ -1,5 +1,5 @@
 export interface Persona {
-    idPersona: string,
+    id: number,
     user: string,
     password: string,
     name: string,

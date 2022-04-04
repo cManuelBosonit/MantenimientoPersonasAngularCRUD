@@ -10,7 +10,7 @@ import { PersonasService } from '../personas.service';
 
 export class ListadoPersonasComponent implements OnInit {
 
-  displayedColumns: string[] = ['idPersona', 'user', 'password', 'name', 'surname', 'companyEmail', 'personalEmail',
+  displayedColumns: string[] = ['id', 'user', 'password', 'name', 'surname', 'companyEmail', 'personalEmail',
   'city', 'activate', 'createdDate', 'imagenUrl','terminationDate']
   personas: Persona[] = [];
   value = 'Nombre Usuario';
