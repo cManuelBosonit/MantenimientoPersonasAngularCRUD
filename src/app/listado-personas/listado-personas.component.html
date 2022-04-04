@@ -23,11 +23,11 @@
 
     <ng-container matColumnDef="actionButton">
       <th mat-header-cell *matHeaderCellDef> Actions</th>
-      <td mat-cell *matCellDef="let row"> 
-        <app-modal></app-modal>
+      <td mat-cell *matCellDef="let persona"> 
+        <app-modal [personaDetalle]="persona"></app-modal>
       </td>    
     </ng-container>
-    
+
     
     
     <tr mat-header-row *matHeaderRowDef="displayedColumns.concat(['actionButton'])"></tr>

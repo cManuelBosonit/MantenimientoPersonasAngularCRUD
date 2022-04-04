@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Persona } from '../interfaces/persona.interface';
 
 @Component({
   selector: 'app-modal-dialog',
@@ -7,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalDialogComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public dialogRef: MatDialogRef<ModalDialogComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: Persona,
+  ) {}
 
   ngOnInit(): void {
   }

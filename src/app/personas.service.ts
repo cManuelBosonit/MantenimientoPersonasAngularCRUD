@@ -13,19 +13,17 @@ export class PersonasService {
   constructor( private http:HttpClient) { }
 
   getAllPersonas():Observable<Persona[]>{
-    let completeUrl = `${this.url}/personas`;
+    const completeUrl = `${this.url}/personas`;
     return this.http.get<Persona[]>(completeUrl); 
   }
 
   getPersonaByName(name: string):Observable<Persona[]>{
-    let completeUrl = `${this.url}/personas/?name=${name}`;
-    console.log(completeUrl);
+    const completeUrl = `${this.url}/personas/?name=${name}`;
     return this.http.get<Persona[]>(completeUrl); 
   }
 
-  getPersonaById(id: string):Observable<Persona>{
-    let completeUrl = `${this.url}/personas/${id}`;
-    console.log(completeUrl);
+  getPersonaById(id: number):Observable<Persona>{
+    const completeUrl = `${this.url}/personas/${id}`;
     return this.http.get<Persona>(completeUrl); 
   }
 

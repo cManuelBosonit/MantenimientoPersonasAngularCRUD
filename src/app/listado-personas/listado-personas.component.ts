@@ -14,6 +14,7 @@ export class ListadoPersonasComponent implements OnInit {
   'city', 'activate', 'createdDate', 'imagenUrl','terminationDate']
   personas: Persona[] = [];
   value = 'Nombre Usuario';
+  personaDetalle : any;
   
 
   constructor( private personaSerice:PersonasService) { }
@@ -29,6 +30,13 @@ export class ListadoPersonasComponent implements OnInit {
     this.personaSerice.getPersonaByName(name)
       .subscribe(data => {
         this.personas = data;
+      })
+  }
+
+  getPersona( id: number ){
+    this.personaSerice.getPersonaById(id)
+      .subscribe(data => {
+        this.personaDetalle = data;
       })
   }
 

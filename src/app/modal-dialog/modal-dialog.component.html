@@ -1,5 +1,11 @@
-<h1 mat-dialog-title>Dialog with elements</h1>
-<div mat-dialog-content>This dialog showcases the title, close, content and actions elements.</div>
+<h1 mat-dialog-title>{{data.name}} {{data.surname}}</h1>
+<div mat-dialog-content>
+    <p>Usuario: {{data.user}}</p>
+    <p>Personal eMail: {{data.personalEmail}}</p>
+    <p>Company eMail: {{data.companyEmail}}</p>
+    <p>Ciudad: {{data.city}}</p>
+    <p>Activo: {{data.activate}}</p>
+</div>
 <div mat-dialog-actions>
   <button mat-button mat-dialog-close>Close</button>
 </div>
