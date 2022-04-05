@@ -37,5 +37,9 @@ export class PersonasService {
     return this.http.put<Persona>(completeUrl, form); 
   }
 
+  addPersona(form:Persona):Observable<Persona>{
+    const completeUrl = `${this.url}/personas`;
+    return this.http.post<Persona>(completeUrl, form); 
+  }
 
 }

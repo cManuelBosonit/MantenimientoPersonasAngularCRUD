@@ -51,14 +51,12 @@ export class EditarPersonasComponent implements OnInit {
         imagenUrl: data.imagenUrl,
         terminationDate: data.terminationDate,
       });
-      console.log(this.editarForm.value)
     });
   }
 
 putForm(form: Persona){
     this.personaService.editarPersona(this.activerouter.snapshot.paramMap.get('id'), form)
       .subscribe(data =>{
-      console.log(data)
     })
     this.location.back()
   }
