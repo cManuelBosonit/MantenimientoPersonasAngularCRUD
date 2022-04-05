@@ -22,7 +22,7 @@ export class PersonasService {
     return this.http.get<Persona[]>(completeUrl); 
   }
 
-  getPersonaById(id: number):Observable<Persona>{
+  getPersonaById(id: string | null):Observable<Persona>{
     const completeUrl = `${this.url}/personas/${id}`;
     return this.http.get<Persona>(completeUrl); 
   }
@@ -30,6 +30,11 @@ export class PersonasService {
   deleteById(id: number):Observable<Persona>{
     const completeUrl = `${this.url}/personas/${id}`
     return this.http.delete<Persona>(completeUrl); 
+  }
+
+  editarPersona(id: any, form:Persona):Observable<Persona>{
+    const completeUrl = `${this.url}/personas/${id}`;
+    return this.http.put<Persona>(completeUrl, form); 
   }
 
 

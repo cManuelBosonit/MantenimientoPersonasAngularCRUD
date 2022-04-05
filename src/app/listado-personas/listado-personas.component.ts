@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+
 import { Persona } from '../interfaces/persona.interface';
 import { PersonasService } from '../personas.service';
 
@@ -17,7 +20,8 @@ export class ListadoPersonasComponent implements OnInit {
   personaDetalle : any;
   
 
-  constructor( private personaService:PersonasService) { }
+  constructor( private personaService:PersonasService,
+                private router:Router) { }
 
   ngOnInit(): void {
     this.personaService.getAllPersonas()
@@ -31,6 +35,10 @@ export class ListadoPersonasComponent implements OnInit {
       .subscribe(data => {
         this.personas = data;
       })
+  }
+
+  crearPersona(){
+    this.router.navigate(['crearPersona'])
   }
 
 }

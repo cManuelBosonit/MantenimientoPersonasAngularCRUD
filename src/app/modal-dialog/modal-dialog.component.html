@@ -8,6 +8,18 @@
 </div>
 <div mat-dialog-actions>
   <button (click)="deleteUser(data.id)"
-          mat-button color="warn" mat-dialog-close>Delete</button>
+          mat-button 
+          color="warn" 
+          mat-dialog-close
+          >
+          Delete
+  </button>
+  <button (click)="editUser(data.id)"
+          mat-button 
+          color="accent" 
+          mat-dialog-close
+          >
+          Editar
+  </button>
   <button mat-button mat-dialog-close>Close</button>
 </div>
