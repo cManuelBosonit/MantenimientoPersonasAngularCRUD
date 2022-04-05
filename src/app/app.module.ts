@@ -19,13 +19,13 @@ import {MatIconModule} from '@angular/material/icon';
 
 
 
-import { Error404Component } from './error404/error404.component';
+import { Error404Component } from './shared/error404/error404.component';
 import { HomeComponent } from './home/home.component';
-import { ListadoPersonasComponent } from './listado-personas/listado-personas.component';
-import { ModalComponent } from './modal/modal.component';
-import { ModalDialogComponent } from './modal-dialog/modal-dialog.component';
-import { CrearPersonasComponent } from './crear-personas/crear-personas.component';
-import { EditarPersonasComponent } from './editar-personas/editar-personas.component';
+import { ListadoPersonasComponent } from './personas/listado-personas/listado-personas.component';
+import { ModalComponent } from './shared/modal/modal.component';
+import { ModalDialogComponent } from './shared/modal-dialog/modal-dialog.component';
+import { CrearPersonasComponent } from './personas/crear-personas/crear-personas.component';
+import { EditarPersonasComponent } from './personas/editar-personas/editar-personas.component';
 
 
 @NgModule({

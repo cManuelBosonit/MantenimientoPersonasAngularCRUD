@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 
 
 import { Persona } from '../interfaces/persona.interface';
-import { PersonasService } from '../personas.service';
+import { PersonasService } from '../../personas.service';
 
 @Component({
   selector: 'app-listado-personas',

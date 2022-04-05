@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { PersonasService } from '../personas.service';
+import { PersonasService } from '../../personas.service';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Persona } from '../interfaces/persona.interface';
 import { Location } from '@angular/common';

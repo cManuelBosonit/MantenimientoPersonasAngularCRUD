@@ -1,8 +1,8 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import { Persona } from '../interfaces/persona.interface';
-import { PersonasService } from '../personas.service';
+import { Persona } from '../../personas/interfaces/persona.interface';
+import { PersonasService } from '../../personas.service';
 
 @Component({
   selector: 'app-modal-dialog',
