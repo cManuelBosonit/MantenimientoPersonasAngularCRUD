@@ -11,6 +11,15 @@ Se recibiran las presuestas:
 
   Home
   http://localhost:3000
+  
+# Detalles
+Mantenimiento de personas en Angular.
+Cuando entra a la aplicación debe mostrar un listado con todas las personas en formato tabla. Utilizar “angular-material” (https://material.angular.io/) 
+Para cada registro de la tabla existirán las siguientes opciones
+⦁	Baja/Modificación y Detalle.    Detalle mostrará los datos de la persona en una ventana ‘modal’. Las demás opciones utilizaran rutas.  /delete/{id} /update/{id}
+⦁	Encima de la tabla existirá un botón para dar de alta. 
+⦁	También habrá un campo de texto que permitirá buscar por nombre.
+
 
 # Crudangular
 
